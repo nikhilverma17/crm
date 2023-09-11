@@ -1,0 +1,40 @@
+.table-container1 {
+       display: flex;
+       justify-content: space-between;
+       padding-bottom: 35px;
+       text-align: justify;
+       color: black;
+   }
+
+   .column1 {
+       width: 60%;
+       font-size: 1.3rem;
+       /* Set the width of each column */
+   }
+   .body{
+    padding:350px 50px;
+    height: 1430px;
+    padding-bottom: 0px;
+   }
+   .table1{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    
+   
+   }
+        table {
+            font-family: arial, sans-serif;
+            font-size: 1.2rem;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        th,
+        td {
+            text-align: justify;
+            padding: 2px;
+            /* Add 8px padding to all cells */
+            width: 10%;
+        }
+     

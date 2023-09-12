@@ -9,10 +9,11 @@
    .column1 {
        width: 60%;
        font-size: 1.3rem;
+       padding: 0px 50px;
        /* Set the width of each column */
    }
    .body{
-    padding:340px 50px;
+    padding:340px 0px;
     height: 1430px;
     
    }
@@ -76,11 +77,12 @@
                            .column1 {
                                width: 60%;
                                font-size: 1.3rem;
+                               padding: 0px 100px;
                                /* Set the width of each column */
                            }
             
                            .body {
-                               padding: 260px 0px;
+                               padding: 250px 10px;
                                height: 1430px;
             
                            }

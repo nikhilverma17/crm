@@ -18,11 +18,12 @@ function Header({setSearch}) {
     }
 
     return (
-    <>        { userInfo? <Navbar expand="lg" bg="" variant="light">
+        <>        {userInfo ? <Navbar expand="lg" bg="" variant="light">
+            
             <Container fluid>
                 <Navbar className="bg-inherit justify-content-between ml-auto">
                 <Form inline>
-                    <InputGroup>
+                    <InputGroup size="lg">
                         <Form.Control
                             placeholder=""
                             aria-label=""
@@ -34,18 +35,16 @@ function Header({setSearch}) {
                     </Form>
                 </Navbar>
              
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar id="navbarScroll md-auto ">
-                     <Nav
-                        className="ml-auto"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        <NavLink style={{ fontSize: "20px" }} href='/mydata'><b>Clients</b></NavLink>
-                        <NavLink style={{ fontSize: "20px" }} href='/profile'><b>{userInfo?.name}</b></NavLink>
-                        <NavLink style={{ fontSize: "20px" }} onClick={logoutHandler}><b>Logout</b></NavLink>
-                    </Nav>
-                    
+             
+                <Navbar expand="sm" variant="light" bg="">
+                    <Navbar.Toggle aria-controls="navbar-nav" />
+                    <Navbar.Collapse id="navbar-nav">
+                        <Nav className="ml-auto text-center">
+                            <NavLink className="mx-2" href="/mydata">Clients</NavLink>
+                            <NavLink className="mx-2" href="/profile">{userInfo?.name}</NavLink>
+                            <NavLink className="mx-2" onClick={logoutHandler}>Logout</NavLink>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Navbar>
             </Container>
         </Navbar> : <Nav>

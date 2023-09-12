@@ -1,7 +1,7 @@
 .table-container1 {
        display: flex;
        justify-content: space-between;
-       padding-bottom: 35px;
+       padding-bottom: 50px;
        text-align: justify;
        color: black;
    }
@@ -12,9 +12,9 @@
        /* Set the width of each column */
    }
    .body{
-    padding:350px 50px;
+    padding:340px 50px;
     height: 1430px;
-    padding-bottom: 0px;
+    
    }
    .table1{
     padding-bottom: 0px;
@@ -38,3 +38,57 @@
             width: 10%;
         }
      
+           .flex-container {
+               display: flex;
+               justify-content: space-between;
+           }
+    
+           .column {
+               flex: 1;
+               padding: 0px 10px;
+               margin-bottom: 20px;
+           }
+    
+           .list-item {
+               font-size: 1.1rem;
+               margin-bottom: 1rem;
+           }
+    
+           /* Media query for screens with a maximum width of 768px (typical mobile size) */
+           @media (max-width: 768px) {
+               .flex-container {
+                   flex-direction: column;
+                   /* Stack columns vertically */
+               }
+    
+               .column {
+                   padding: 0px;
+                   margin-bottom: 10px;
+               }
+                           .table-container1 {
+                               display: flex;
+                               justify-content: space-between;
+                               padding-bottom: 50px;
+                               text-align: justify;
+                               color: black;
+                           }
+            
+                           .column1 {
+                               width: 60%;
+                               font-size: 1.3rem;
+                               /* Set the width of each column */
+                           }
+            
+                           .body {
+                               padding: 300px 50px;
+                               height: 1430px;
+            
+                           }
+            
+                           .table1 {
+                               padding-bottom: 0px;
+                               margin-bottom: 0px;
+            
+            
+                           }
+           }

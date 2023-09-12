@@ -4533,7 +4533,8 @@ fieldset:disabled .btn {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+
 }
 
 .navbar-brand {

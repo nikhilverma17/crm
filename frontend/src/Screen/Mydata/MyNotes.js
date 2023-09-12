@@ -193,7 +193,7 @@ function MyNotes({ search }) {
     };
 
     return (
-        <div>
+        <div className="my-notes-container">
             <MainScreen title=<b>{`Welcome ${userInfo && userInfo.name}`}</b>>
 
                 <Button href='/createnote' style={{ marginLeft: 10, marginBottom: 6 }} size='lg' variant='warning'>
@@ -209,21 +209,19 @@ function MyNotes({ search }) {
                 {notes?.reverse().filter(filteredNotes => filteredNotes.title.toLowerCase().includes(search.toLowerCase())).map(note => (
 
                     <Card>
-                        <Card.Header style={{ display: "flex" }}>
+                        <Card.Header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                             <span style={{
-                                color: "black",
-                                textDecoration: "none",
-                                flex: 1,
-                                cursor: "pointer",
-                                alignSelf: "center",
-                                fontSize: 30,
+                                color: 'black',
+                                textDecoration: 'none',
+                                fontSize: '30px',
+                                marginBottom: '10px',
                             }}>
-                                {note.title}<br></br>
-                                <p style={{ fontSize: 20 }}>Father's Name-{note.fathersname}</p>
+                                {note.title}<br />
+                                <span style={{ fontSize: '20px' }}>Father's Name: {note.fathersname}</span>
                             </span>
-                            <div>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Button
-                                    onClick={() => generatePDF(note)} // Call generatePDF function on button click
+                                    onClick={() => generatePDF(note)}
                                     className='mx-2'
                                     variant='primary'
                                 >
@@ -241,6 +239,7 @@ function MyNotes({ search }) {
                                 </Button>
                             </div>
                         </Card.Header>
+
                         <Accordion>
                             <Accordion.Header>Click to See Deatils</Accordion.Header>
                             <Accordion.Body>
@@ -250,40 +249,40 @@ function MyNotes({ search }) {
                                             <h1 style={{ color: 'red', fontSize: '1.6rem', marginBottom: '1rem' }}>
                                                 {note.title} Details
                                             </h1>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                <div style={{ flex: 1 }}>
-                                                    <ul style={{ fontSize: '1.1rem', padding: '0px 100px' }}>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Father's Name:</b> {note.fathersname}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Mother's Name:</b> {note.mothersname}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Mobile:</b> {note.mobile}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Email:</b> {note.email}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Date of Birth:</b> {note.dob}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Age:</b> {note.age}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Marital Status:</b> {note.maritalstatus}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Spouse Name:</b> {note.spousename}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Adhar Card:</b> {note.adharnumber}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Pan Card:</b> {note.pancard}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Address:</b> {note.address}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Height:</b> {note.height}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Weight:</b> {note.weight}</li>
+                                            <div className='flex-container' >
+                                                <div className='column'>
+                                                    <ul>
+                                                        <li className='list-item'><b>Father's Name:</b> {note.fathersname}</li>
+                                                        <li className='list-item'><b>Mother's Name:</b> {note.mothersname}</li>
+                                                        <li className='list-item'><b>Mobile:</b> {note.mobile}</li>
+                                                        <li className='list-item'><b>Email:</b> {note.email}</li>
+                                                        <li className='list-item'><b>Date of Birth:</b> {note.dob}</li>
+                                                        <li className='list-item'><b>Age:</b> {note.age}</li>
+                                                        <li className='list-item'><b>Marital Status:</b> {note.maritalstatus}</li>
+                                                        <li className='list-item'><b>Spouse Name:</b> {note.spousename}</li>
+                                                        <li className='list-item'><b>Adhar Card:</b> {note.adharnumber}</li>
+                                                        <li className='list-item'><b>Pan Card:</b> {note.pancard}</li>
+                                                        <li className='list-item'><b>Address:</b> {note.address}</li>
+                                                        <li className='list-item'><b>Height:</b> {note.height}</li>
+                                                        <li className='list-item'><b>Weight:</b> {note.weight}</li>
                                                         
                                                     </ul>
                                                 </div>
-                                                <div style={{ flex: 1 }}>
-                                                    <ul style={{ fontSize: '1.1rem', padding: '0px 100px' }}>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Education:</b> {note.education}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Occupation:</b> {note.occupation}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Income:</b> {note.income}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Years Of Duty :</b> {note.yearsofduty}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Plan & Term:</b> {note.plannumber}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Date Of Commencement:</b> {note.doc}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Sum Assured:</b> {note.sumassured}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Identity Mark:</b> {note.identityMark}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Nominee:</b> {note.nominee}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Nominee Age:</b> {note.nomineeage}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Nominee Relation:</b> {note.nomineerelation}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Nominee Adhar Number:</b> {note.nomineeadharnumber}</li>
-                                                        <li style={{ marginBottom: '1rem' }}><b>Other Policies:</b> {note.otherpolicies}</li>
+                                                <div className='column'>
+                                                    <ul>
+                                                        <li className='list-item'><b>Education:</b> {note.education}</li>
+                                                        <li className='list-item'><b>Occupation:</b> {note.occupation}</li>
+                                                        <li className='list-item'><b>Income:</b> {note.income}</li>
+                                                        <li className='list-item'><b>Years Of Duty :</b> {note.yearsofduty}</li>
+                                                        <li className='list-item'><b>Plan & Term:</b> {note.plannumber}</li>
+                                                        <li className='list-item'><b>Date Of Commencement:</b> {note.doc}</li>
+                                                        <li className='list-item'><b>Sum Assured:</b> {note.sumassured}</li>
+                                                        <li className='list-item'><b>Identity Mark:</b> {note.identityMark}</li>
+                                                        <li className='list-item'><b>Nominee:</b> {note.nominee}</li>
+                                                        <li className='list-item'><b>Nominee Age:</b> {note.nomineeage}</li>
+                                                        <li className='list-item'><b>Nominee Relation:</b> {note.nomineerelation}</li>
+                                                        <li className='list-item'><b>Nominee Adhar Number:</b> {note.nomineeadharnumber}</li>
+                                                        <li className='list-item'><b>Other Policies:</b> {note.otherpolicies}</li>
 
                                                     </ul>
                                                 </div>

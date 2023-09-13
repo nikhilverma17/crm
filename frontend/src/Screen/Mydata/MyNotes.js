@@ -59,7 +59,7 @@ function MyNotes({ search }) {
                 <p style="margin-bottom: 1rem;"><b>Date of Birth:</b> ${note.dob}</p>
                 <p style="margin-bottom: 1rem;"><b>Age:</b> ${note.age}</p>
                 <p style="margin-bottom: 1rem;"><b>Marital Status:</b> ${note.maritalstatus}</p>
-                <p style="margin-bottom: 1rem;"><b>Spouse Name:</b> ${note.spousename}</p>
+                <p style="margin-bottom: 1rem;"><b>Husband/Wife Name:</b> ${note.spousename}</p>
                 <p style="margin-bottom: 1rem;"><b>Adhar Number:</b> ${note.adharnumber}</p>
                 <p style="margin-bottom: 1rem;"><b>Pan Card:</b> ${note.pancard}</p>
                 <p style="margin-bottom: 1rem;"><b>Address:</b> ${note.address}</p>
@@ -147,7 +147,7 @@ function MyNotes({ search }) {
 
     <table>
         <tr>
-            <th>Spouse Age</th>
+            <th>Spouse</th>
             <th>Age</th>
             <th>Living & Health</th>
             <th>Death & Reason</th>
@@ -189,7 +189,11 @@ function MyNotes({ search }) {
         const element = document.createElement('div');
         element.innerHTML = content;
 
-        html2pdf().from(element).set(opt).save();
+        html2pdf().from(element).set(opt).save().then(() => {
+            // Refresh the page after PDF download
+            window.location.reload();
+        });
+
     };
 
     return (
@@ -259,7 +263,7 @@ function MyNotes({ search }) {
                                                         <li className='list-item'><b>Date of Birth:</b> {note.dob}</li>
                                                         <li className='list-item'><b>Age:</b> {note.age}</li>
                                                         <li className='list-item'><b>Marital Status:</b> {note.maritalstatus}</li>
-                                                        <li className='list-item'><b>Spouse Name:</b> {note.spousename}</li>
+                                                        <li className='list-item'><b>Husband/Wife Name:</b> {note.spousename}</li>
                                                         <li className='list-item'><b>Adhar Card:</b> {note.adharnumber}</li>
                                                         <li className='list-item'><b>Pan Card:</b> {note.pancard}</li>
                                                         <li className='list-item'><b>Address:</b> {note.address}</li>

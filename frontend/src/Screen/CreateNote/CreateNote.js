@@ -303,7 +303,7 @@ const CreateNote = () => {
                             />
                         </Form.Group>
                         <Form.Group controlId="spousename" className="mb-4">
-                            <Form.Label>Spose Name</Form.Label>
+                            <Form.Label>Husband/Wife Name</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={spousename}
@@ -535,7 +535,7 @@ const CreateNote = () => {
                             />
                         </Form.Group>
                         <Form.Group controlId="sistersdeath" className="mb-4">
-                            <Form.Label>Sister's Death</Form.Label>
+                            <Form.Label>Sister's Death & Reason</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={sistersdeath}
@@ -571,7 +571,7 @@ const CreateNote = () => {
                             />
                         </Form.Group>
                         <Form.Group controlId="brothersdeath" className="mb-4">
-                            <Form.Label>Brothers's Death</Form.Label>
+                            <Form.Label>Brothers's Death & Reason</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={brothersdeath}
@@ -580,7 +580,7 @@ const CreateNote = () => {
                             />
                         </Form.Group>
                         <Form.Group controlId="spouseage" className="mb-4">
-                            <Form.Label>Spouse's Age</Form.Label>
+                            <Form.Label>Husband/Wife Age</Form.Label>
                             <Form.Control
                                 type="number"
                                 value={spouseage}
@@ -589,7 +589,7 @@ const CreateNote = () => {
                             />
                         </Form.Group>
                         <Form.Group controlId="spousedeath" className="mb-4">
-                            <Form.Label>Spouse's Death</Form.Label>
+                            <Form.Label>Husband/Wife Death & Reason</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={spousedeath}

@@ -189,7 +189,11 @@ function MyNotes({ search }) {
         const element = document.createElement('div');
         element.innerHTML = content;
 
-        html2pdf().from(element).set(opt).save();
+        html2pdf().from(element).set(opt).save().then(() => {
+            // Refresh the page after PDF download
+            window.location.reload();
+        });
+
     };
 
     return (

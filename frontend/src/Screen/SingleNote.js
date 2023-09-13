@@ -700,14 +700,14 @@ const SingleNote = () => {
                         </Form.Group>
                         {loading && <Loading size={50} />}
                         <Button variant="primary" type="submit">
-                            Update Note
+                            Update Client
                         </Button>
                         <Button
                             className="mx-2"
                             variant="danger"
                             onClick={() => deleteHandler(NoteId)}
                         >
-                            Delete Note
+                            Delete Client
                         </Button>
                     </Form>
                 </Card.Body>

@@ -40,9 +40,9 @@ function Header({setSearch}) {
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav">
                         <Nav className="ml-auto text-center">
-                            <NavLink className="mx-2" href="/mydata">Clients</NavLink>
-                            <NavLink className="mx-2" href="/profile">{userInfo?.name}</NavLink>
-                            <NavLink className="mx-2" onClick={logoutHandler}>Logout</NavLink>
+                            <NavLink className="mx-2" href="/mydata"><b>Clients</b></NavLink>
+                            <NavLink className="mx-2" href="/profile"><b>{userInfo?.name}</b></NavLink>
+                            <NavLink className="mx-2" onClick={logoutHandler}><b>Logout</b></NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

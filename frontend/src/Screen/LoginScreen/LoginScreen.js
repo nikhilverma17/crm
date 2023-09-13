@@ -45,13 +45,12 @@ function LoginScreen() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                     </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
+                    <br></br>
                     <Button variant="primary" type="submit">
                         Submit
                     </Button>
                 </Form>
+                <br></br>
                 <Row className='py3'>
                     <Col>
                         New User? <Link variant='dark' to='/register'>Register Here</Link>

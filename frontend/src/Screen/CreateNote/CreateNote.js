@@ -221,6 +221,7 @@ const CreateNote = () => {
      
 
     };
+    
 
     return (
         <MainScreen title="Fill the database">
@@ -242,7 +243,7 @@ const CreateNote = () => {
                         <Form.Group controlId="mobile" className="mb-4">
                             <Form.Label>Mobile</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={mobile}
 
                                 onChange={(e) => setMobile(e.target.value)}
@@ -286,7 +287,7 @@ const CreateNote = () => {
                         <Form.Group controlId="Age" className="mb-4">
                             <Form.Label>Age</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={age}
 
                                 onChange={(e) => setAge(e.target.value)}
@@ -321,7 +322,7 @@ const CreateNote = () => {
                         <Form.Group controlId="adharnumber" className="mb-4">
                             <Form.Label>Adhar Card Number</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={adharnumber}
                                 placeholder="Last 4 digits"
                                 onChange={(e) => setAdharnumber(e.target.value)}
@@ -347,7 +348,7 @@ const CreateNote = () => {
                         <Form.Group controlId="nomineeage" className="mb-4">
                             <Form.Label>Nominee Age</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={nomineeage}
                                 onChange={(e) => setNomineeage(e.target.value)}
                             />
@@ -363,7 +364,7 @@ const CreateNote = () => {
                         <Form.Group controlId="nomineeadharnumber" className="mb-4">
                             <Form.Label>Nominee Adhar Number</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={nomineeadharnumber}
                                 onChange={(e) => setNomineeadharnumber(e.target.value)}
                             />
@@ -399,9 +400,9 @@ const CreateNote = () => {
                         <Form.Group controlId="income" className="mb-4">
                             <Form.Label>Income</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={income}
-
+                                placeholder="₹"
                                 onChange={(e) => setIncome(e.target.value)}
                             />
                         </Form.Group>
@@ -426,7 +427,7 @@ const CreateNote = () => {
                         <Form.Group controlId="plannumber" className="mb-4">
                             <Form.Label>Plan & Term</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={plannumber}
 
                                 onChange={(e) => setPalnnumber(e.target.value)}
@@ -444,8 +445,9 @@ const CreateNote = () => {
                         <Form.Group controlId="sumassured" className="mb-4">
                             <Form.Label>Sum Assured</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={sumassured}
+                                placeholder="₹"
 
                                 onChange={(e) => setSumassured(e.target.value)}
                             />
@@ -472,7 +474,7 @@ const CreateNote = () => {
                         <Form.Group controlId="fathersage" className="mb-4">
                             <Form.Label>Father's Age</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={fathersage}
 
                                 onChange={(e) => setFathersage(e.target.value)}
@@ -490,7 +492,7 @@ const CreateNote = () => {
                         <Form.Group controlId="mothersage" className="mb-4">
                             <Form.Label>Mother's Age</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={mothersage}
 
                                 onChange={(e) => setMothersage(e.target.value)}
@@ -508,7 +510,7 @@ const CreateNote = () => {
                         <Form.Group controlId="sistersnumber" className="mb-4">
                             <Form.Label>Sisters</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={sistersnumber}
 
                                 onChange={(e) => setSistersnumber(e.target.value)}
@@ -526,7 +528,7 @@ const CreateNote = () => {
                         <Form.Group controlId="sistersliving" className="mb-4">
                             <Form.Label>Sister's Living</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={sistersliving}
 
                                 onChange={(e) => setSistersliving(e.target.value)}
@@ -544,7 +546,7 @@ const CreateNote = () => {
                         <Form.Group controlId="brothersnumber" className="mb-4">
                             <Form.Label>Brothers</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={brothersnumber}
 
                                 onChange={(e) => setBrothersnumber(e.target.value)}
@@ -562,7 +564,7 @@ const CreateNote = () => {
                         <Form.Group controlId="brothersliving" className="mb-4">
                             <Form.Label>Brothers's Living</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={brothersliving}
 
                                 onChange={(e) => setBrothersliving(e.target.value)}
@@ -580,7 +582,7 @@ const CreateNote = () => {
                         <Form.Group controlId="spouseage" className="mb-4">
                             <Form.Label>Spouse's Age</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={spouseage}
 
                                 onChange={(e) => setSpouseage(e.target.value)}
@@ -598,7 +600,7 @@ const CreateNote = () => {
                         <Form.Group controlId="childnumber" className="mb-4">
                             <Form.Label>Childrens</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={childnumber}
 
                                 onChange={(e) => setChildnumber(e.target.value)}
@@ -616,7 +618,7 @@ const CreateNote = () => {
                         <Form.Group controlId="childliving" className="mb-4">
                             <Form.Label>Children's Living</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 value={childliving}
 
                                 onChange={(e) => setChildLiving(e.target.value)}
@@ -633,7 +635,7 @@ const CreateNote = () => {
                         </Form.Group>
                         {loading && <Loading size={50} />}
                         <Button type="submit" variant="primary">
-                            Create Note
+                            Create Client
                         </Button>
                         <Button onClick={resetHandler} variant="danger" className="ms-4 px-3 red-button">
                             Reset Fields

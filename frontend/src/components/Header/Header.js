@@ -18,12 +18,12 @@ function Header({setSearch}) {
     }
 
     return (
-        <>        {userInfo ? <Navbar expand="lg" bg="" variant="light">
+        <>        {userInfo ? <Navbar expand="lg" bg="primary" variant="light">
             
             <Container fluid>
                 <Navbar className="bg-inherit justify-content-between ml-auto">
                 <Form inline>
-                    <InputGroup size="lg">
+                    <InputGroup size="md">
                         <Form.Control
                             placeholder=""
                             aria-label=""
